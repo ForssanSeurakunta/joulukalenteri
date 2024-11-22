@@ -1,13 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #ffcc99, #ff6666); /* Joulunpunainen ja kulta gradientti */
     padding: 20px;
+    background-size: cover;
+    color: #fff;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .calendar {
@@ -17,23 +21,24 @@ h1 {
 }
 
 .door {
-    background-color: #ddd;
+    background-color: #ffcccc; /* Vaaleanpunainen joulutunnelma */
     padding: 20px;
     border-radius: 8px;
     position: relative;
     height: 100px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #ffcc99; /* Kiiltävä joulutunnelma */
 }
 
 .door.open {
-    background-color: #ffcc99;
-    transform: scale(1.1); /* Animaatioefekti */
+    background-color: #ff9966; /* Vaalean oranssi, kun luukku on avattu */
+    transform: scale(1.1); /* Zoom-efekti */
 }
 
 .door:hover {
-    background-color: #ff9999;
+    background-color: #ff6699; /* Punaista väriä hover-tilassa */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ffcc99;
 }
 
 .door[style*="pointer-events: none"] {
@@ -66,4 +71,18 @@ h1 {
         top: 100px;
         opacity: 0;
     }
+}
+
+/* Lisää juhlallista kirkkautta */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff9966;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff9966;
+    }
+}
+
+h1 {
+    animation: glow 1.5s alternate infinite;
 }
