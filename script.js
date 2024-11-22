@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     doors.forEach(door => {
         const day = parseInt(door.getAttribute("data-day"));
         
-        // Varmistetaan, että luukku voidaan avata vasta joulukuussa
+        // Varmistetaan, että luukku voidaan avata vain joulukuussa
         if (currentMonth === 11 && day <= currentDay) {
-            // Voidaan avata luukku, jos olemme joulukuussa ja oikea päivä on käsillä
+            // Voidaan avata luukku vain joulukuussa ja vain oikeana päivänä
             door.addEventListener("click", () => {
                 door.classList.add("open");
                 window.location.href = `https://www.example.com/video-${day}`; // Linkki videoon
