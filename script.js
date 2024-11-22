@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.location.href = `https://www.example.com/video-${day}`; // Linkki videoon
             });
         } else {
-            // Estetään klikkaukset tuleville luukoille
+            // Estetään klikkaukset ennen joulukuuta ja tuleville luukoille
             door.style.pointerEvents = "none";
             door.style.opacity = "0.6";
             door.style.cursor = "not-allowed";
