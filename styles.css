@@ -37,7 +37,11 @@ h1 {
 }
 
 .door[style*="pointer-events: none"] {
-    opacity: 0.6;
+    opacity: 0.6; /* Haaleaksi tuleville luukoille */
+}
+
+.door[style*="pointer-events: none"] {
+    cursor: not-allowed; /* Estetään klikkaukset */
 }
 
 .snow-effect {
