@@ -1,3 +1,24 @@
+/* Lumisateen tyylit */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    pointer-events: none;
+    font-size: 24px;
+    color: white;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateX(0) translateY(-100vh);
+    }
+    100% {
+        transform: translateX(100px) translateY(100vh);
+    }
+}
+
+/* Lumisateen ja kirkkautta lisäävän tyylit */
 body {
     font-family: "Arial", sans-serif;
     text-align: center;
@@ -12,6 +33,16 @@ h1 {
     margin-bottom: 20px;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: glow 1.5s alternate infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff9966;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff9966;
+    }
 }
 
 .calendar {
@@ -49,6 +80,7 @@ h1 {
     cursor: not-allowed; /* Estetään klikkaukset */
 }
 
+/* Lisätty lumisateen ja kirkastamisen efektit */
 .snow-effect {
     position: absolute;
     top: -20px;
@@ -71,18 +103,4 @@ h1 {
         top: 100px;
         opacity: 0;
     }
-}
-
-/* Lisää juhlallista kirkkautta */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff9966;
-    }
-    100% {
-        text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff9966;
-    }
-}
-
-h1 {
-    animation: glow 1.5s alternate infinite;
 }
