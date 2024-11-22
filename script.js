@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const day = parseInt(door.getAttribute("data-day"));
         
         // Varmistetaan, että luukku voidaan avata vain joulukuussa
-        if (currentMonth === 12 && day <= currentDay) {
+        if (currentMonth === 11 && day <= currentDay) {
             // Voidaan avata luukku vain joulukuussa ja vain oikeana päivänä
             door.addEventListener("click", () => {
                 door.classList.add("open");
