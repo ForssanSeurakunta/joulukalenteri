@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoLinks = [
         "https://youtu.be/WNs7fZ9oAu8",  // Luukku 1
         "https://youtu.be/bFVwdcSUO2o",  // Luukku 2
-        "https://www.example.com/video-3",  // Luukku 3
+        "https://youtu.be/GxwG9Bn2Wrw",  // Luukku 3
         "https://www.example.com/video-4",  // Luukku 4
         "https://www.example.com/video-5",  // Luukku 5
         "https://www.example.com/video-6",  // Luukku 6
