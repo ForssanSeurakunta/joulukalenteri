@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Linkit videoihin
     const videoLinks = [
-        "https://www.forssanseurakunta.fi/info-ja-asiointi/kirkolliset-ilmoitukset",  // Luukku 1
+        "https://youtu.be/WNs7fZ9oAu8",  // Luukku 1
         "https://www.example.com/video-2",  // Luukku 2
         "https://www.example.com/video-3",  // Luukku 3
         "https://www.example.com/video-4",  // Luukku 4
