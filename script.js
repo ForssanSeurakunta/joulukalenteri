@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://youtu.be/A0Kl01Dabgk",  // Luukku 6
         "https://youtu.be/cBJiK2pV5CQ",  // Luukku 7
         "https://youtu.be/KQZG5tUtR_k",  // Luukku 8
-        "https://www.example.com/video-9",  // Luukku 9
-        "https://www.example.com/video-10", // Luukku 10
+        "#",  // Luukku 9
+        "https://youtu.be/QjIOkFX9Ntg", // Luukku 10
         "https://www.example.com/video-11", // Luukku 11
         "https://www.example.com/video-12", // Luukku 12
         "https://www.example.com/video-13", // Luukku 13
