@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://www.example.com/video-22", // Luukku 22
         "https://www.example.com/video-23", // Luukku 23
         "https://www.example.com/video-24", // Luukku 24
+        "https://www.example.com/video-25", // Luukku 25
     ];
 
     // Lumisade
