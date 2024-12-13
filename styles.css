@@ -27,13 +27,13 @@ body {
         transform: scale(1) rotate(0deg); /* Alkuperäinen asento */
     }
     25% {
-        transform: scale(1.1) rotate(-10deg); /* Pieni suurennus ja kallistus vasemmalle */
+        transform: scale(1.1) rotate(-2deg); /* Pieni suurennus ja kallistus vasemmalle */
     }
     50% {
-        transform: scale(1.1) rotate(10deg); /* Pieni suurennus ja kallistus oikealle */
+        transform: scale(1.1) rotate(2deg); /* Pieni suurennus ja kallistus oikealle */
     }
     75% {
-        transform: scale(1.05) rotate(-5deg); /* Vähän vasemmalle */
+        transform: scale(1.05) rotate(-2deg); /* Vähän vasemmalle */
     }
     100% {
         transform: scale(1) rotate(0deg); /* Paluu alkuperäiseen asentoon */
