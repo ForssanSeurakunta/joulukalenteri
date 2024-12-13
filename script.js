@@ -55,4 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
             door.style.cursor = "not-allowed";
         }
     });
+
+    // Generoi lumihiutaleet
+    const snowflakesContainer = document.querySelector('.snowflakes-container');
+    for (let i = 0; i < 30; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄';
+        snowflakesContainer.appendChild(snowflake);
+
+        // Animaatio eri nopeuksilla ja sijainneilla
+        const animationDuration = Math.random() * 3 + 7; // 7s - 10s
+        const animationDelay = Math.random() * 5; // 0s - 5s
+
+        snowflake.style.animationDuration = `${animationDuration}s`;
+        snowflake.style.animationDelay = `${animationDelay}s`;
+        snowflake.style.left = `${Math.random() * 100}%`;
+        snowflake.style.fontSize = `${Math.random() * 10 + 20}px`;
+    }
 });
