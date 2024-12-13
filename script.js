@@ -69,4 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
     logo.addEventListener("mouseleave", () => {
         logo.style.transform = "translate(0, 0)"; // Palautetaan alkuperäiseen paikkaan
     });
+
+    // Lumisateen luominen
+    const snowflakesContainer = document.querySelector('.snowflakes-container');
+
+    // Lisää lumihiutaleita lumisateeseen
+    for (let i = 0; i < 50; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄'; // Lumihiutaleen merkki
+        snowflake.style.left = `${Math.random() * 100}%`; // Sijoittaa satunnaisesti vaakasuunnassa
+        snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Satunnaistaa animaation kestoa
+        snowflake.style.animationDelay = `${Math.random() * 5}s`; // Satunnaistaa animaation aloitusajan
+        snowflakesContainer.appendChild(snowflake);
+    }
 });
