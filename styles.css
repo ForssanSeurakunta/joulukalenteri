@@ -2,15 +2,15 @@
 body {
     font-family: "Arial", sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #ff8c00, #d84e00); /* Lämmin oranssi ja tummempi punainen joulutunnelma */
+    background: linear-gradient(to bottom, #F2727D, #731F2E, #C7CFD9, #F2F2F2, #707F8C); /* Harmoninen gradientti */
     padding: 20px;
     background-size: cover;
-    color: #fff;
+    color: #fff; /* Valkoinen teksti */
 }
 
 /* Logon tyyli */
 .logo {
-    width: 100px; /* Säädä logon koko sopivaksi */
+    width: 300px; /* Säädä logon koko sopivaksi */
     height: auto; /* Pitää mittasuhteet kunnossa */
     margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
     vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
@@ -71,10 +71,10 @@ h1 {
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #d84e00;
+        text-shadow: 0 0 20px #F2727D, 0 0 30px #F2727D, 0 0 40px #F2F2F2;
     }
     100% {
-        text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, 0 0 15px #d84e00;
+        text-shadow: 0 0 5px #F2727D, 0 0 10px #F2727D, 0 0 15px #F2F2F2;
     }
 }
 
@@ -86,24 +86,24 @@ h1 {
 }
 
 .door {
-    background-color: #ffad60; /* Lämmin vaalean oranssi, joulutunnelma */
+    background-color: #F2F2F2; /* Vaaleanharmaa tausta */
     padding: 20px;
     border-radius: 8px;
     position: relative;
     height: 100px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #ff8c00; /* Kiiltävä joulutunnelma */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #F2727D; /* Kiiltävä joulutunnelma */
 }
 
 .door.open {
-    background-color: #ff8c00; /* Kirkas oranssi, kun luukku on avattu */
+    background-color: #F2727D; /* Vaaleanpunainen, kun luukku on avattu */
     transform: scale(1.1); /* Zoom-efekti */
 }
 
 .door:hover {
-    background-color: #ff7f50; /* Lämpimän punertava oranssi hover-tilassa */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ff8c00;
+    background-color: #731F2E; /* Tummanpunainen hover-tilassa */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #F2727D;
 }
 
 .door[style*="pointer-events: none"] {
@@ -114,21 +114,20 @@ h1 {
     cursor: not-allowed; /* Estetään klikkaukset */
 }
 
-/* Säkenöivä efekti luukulle 24
-
+/* Säkenöivä efekti luukulle 24 */
 .door.sparkling {
     animation: sparkle 1.5s infinite;
-    border: 3px solid gold;
-    background: linear-gradient(45deg, rgba(255, 255, 0, 0.6), rgba(255, 223, 0, 0.4));
+    border: 3px solid #F2F2F2;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.4));
 }
 
 @keyframes sparkle {
     0%, 100% {
-        box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(242, 242, 242, 0.6);
         transform: rotate(0deg);
     }
     50% {
-        box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 223, 0, 0.9);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(242, 242, 242, 0.9);
         transform: rotate(2deg);
     }
 }
