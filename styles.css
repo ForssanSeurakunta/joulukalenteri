@@ -10,7 +10,7 @@ body {
 
 /* Logon tyyli */
 .logo {
-    width: 300px; /* Säädä logon koko sopivaksi */
+    width: 100px; /* Säädä logon koko sopivaksi */
     height: auto; /* Pitää mittasuhteet kunnossa */
     margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
     vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
@@ -19,7 +19,7 @@ body {
 
 /* Logon hover-efekti - Tärähdys ja heiluminen */
 .logo:hover {
-    animation: logoShakeAndGrow 1s ease-in-out forwards;
+    animation: logoShakeAndGrow 0.6s ease-in-out forwards;
 }
 
 @keyframes logoShakeAndGrow {
@@ -93,7 +93,7 @@ h1 {
     height: 100px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #F2727D; /* Kiiltävä joulutunnelma */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2); /* Lisää varjostuksia */
 }
 
 .door.open {
@@ -103,7 +103,7 @@ h1 {
 
 .door:hover {
     background-color: #731F2E; /* Tummanpunainen hover-tilassa */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #F2727D;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .door[style*="pointer-events: none"] {
