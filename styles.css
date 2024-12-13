@@ -10,7 +10,7 @@ body {
 
 /* Logon tyyli */
 .logo {
-    width: 100px; /* Säädä logon koko sopivaksi */
+    width: 300px; /* Säädä logon koko sopivaksi */
     height: auto; /* Pitää mittasuhteet kunnossa */
     margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
     vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
@@ -19,7 +19,7 @@ body {
 
 /* Logon hover-efekti - Tärähdys ja heiluminen */
 .logo:hover {
-    animation: logoShakeAndGrow 0.6s ease-in-out forwards;
+    animation: logoShakeAndGrow 0.3s ease-in-out forwards;
 }
 
 @keyframes logoShakeAndGrow {
@@ -86,7 +86,7 @@ h1 {
 }
 
 .door {
-    background-color: #F2F2F2; /* Vaihdettiin harmaa vaaleanpunaiseksi */
+    background-color:#EDD3CD;
     padding: 20px;
     border-radius: 8px;
     position: relative;
