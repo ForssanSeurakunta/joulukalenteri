@@ -1,134 +1,102 @@
 /* Yleiset tyylit */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F0F0;
+    color: #333;
     text-align: center;
-    background: linear-gradient(to bottom, #ffcc99, #ff6666); /* Joulunpunainen ja kulta gradientti */
-    padding: 20px;
-    background-size: cover;
-    color: #fff;
 }
 
-/* Logon tyyli */
-.logo {
-    width: 40px; /* Säädä logon koko sopivaksi */
-    height: auto; /* Pitää mittasuhteet kunnossa */
-    margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
-    vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
+h1 {
+    font-size: 2rem;
 }
 
-/* Lumisateen tyylit */
+p {
+    font-size: 1.2rem;
+}
+
+/* Lumisateen asetukset */
+.snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
 .snowflake {
     position: absolute;
     top: -10px;
-    pointer-events: none;
-    font-size: 24px;
-    color: white;
+    color: #fff;
     opacity: 0.8;
-    animation: snowfall 10s linear infinite;
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes snowfall {
     0% {
-        transform: translateX(0) translateY(-100vh);
+        transform: translateY(0);
+        opacity: 0.9;
     }
     100% {
-        transform: translateX(100px) translateY(100vh);
+        transform: translateY(100vh);
+        opacity: 0.3;
     }
 }
 
-/* Lumisateen ja kirkkautta lisäävän tyylit */
-h1 {
-    font-size: 2.5em;
+/* Kalenterin ja luukkujen tyylit */
+.calendar-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container {
     margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: glow 1.5s alternate infinite;
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff9966;
-    }
-    100% {
-        text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff9966;
-    }
-}
-
-/* Lisätyt animaatiot ja erikoisefektit */
-.snow-effect {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+.logo {
     width: 100%;
-    height: 100%;
-    background-image: url('https://cdn.pixabay.com/photo/2016/12/06/18/01/illustration-1882397_960_720.png'); /* Lumihiutale-kuva */
-    background-repeat: no-repeat;
-    animation: snow 1.5s ease-in-out;
-    opacity: 0.8;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-@keyframes snow {
-    0% {
-        top: -20px;
-        opacity: 1;
-    }
-    100% {
-        top: 100px;
-        opacity: 0;
-    }
-}
-
-/* Muut elementit */
 .calendar {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    grid-gap: 10px;
 }
 
 .door {
-    background-color: #ffcccc; /* Vaaleanpunainen joulutunnelma */
+    background-color: #2A3D4E;
+    color: white;
     padding: 20px;
-    border-radius: 8px;
-    position: relative;
-    height: 100px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #ffcc99; /* Kiiltävä joulutunnelma */
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .door.open {
-    background-color: #ff9966; /* Vaalean oranssi, kun luukku on avattu */
-    transform: scale(1.1); /* Zoom-efekti */
+    background-color: #58A4B0;
+    cursor: default;
 }
 
-.door:hover {
-    background-color: #ff6699; /* Punaista väriä hover-tilassa */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ffcc99;
+/* Erityiset tyylit */
+.sparkling {
+    color: #FFD700;
+    animation: sparkling 2s infinite;
 }
 
-.door[style*="pointer-events: none"] {
-    opacity: 0.6; /* Haaleaksi tuleville luukoille */
-}
-
-.door[style*="pointer-events: none"] {
-    cursor: not-allowed; /* Estetään klikkaukset */
-}
-
-/* Säkenöivä efekti luukulle 24 */
-.door.sparkling {
-    animation: sparkle 1.5s infinite;
-    border: 3px solid gold;
-    background: linear-gradient(45deg, rgba(255, 255, 0, 0.6), rgba(255, 223, 0, 0.4));
-}
-
-@keyframes sparkle {
-    0%, 100% {
-        box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
-        transform: rotate(0deg);
+@keyframes sparkling {
+    0% {
+        color: #FFD700;
     }
     50% {
-        box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 223, 0, 0.9);
-        transform: rotate(2deg);
+        color: #FF00FF;
+    }
+    100% {
+        color: #FFD700;
     }
 }
