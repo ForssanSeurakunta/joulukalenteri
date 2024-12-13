@@ -2,7 +2,7 @@
 body {
     font-family: "Arial", sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #fceabb, #f8b500); /* Pehmeä keltainen ja kirkas oranssi gradientti */
+    background: linear-gradient(to bottom, #ff8c00, #d84e00); /* Lämmin oranssi ja tummempi punainen joulutunnelma */
     padding: 20px;
     background-size: cover;
     color: #fff;
@@ -65,16 +65,16 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     animation: glow 1.5s alternate infinite;
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 20px #f8b500, 0 0 30px #f8b500, 0 0 40px #ff8a00;
+        text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #d84e00;
     }
     100% {
-        text-shadow: 0 0 5px #f8b500, 0 0 10px #f8b500, 0 0 15px #ff8a00;
+        text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, 0 0 15px #d84e00;
     }
 }
 
@@ -86,24 +86,24 @@ h1 {
 }
 
 .door {
-    background-color: #ffda77; /* Pehmeä vaaleankeltainen joulutunnelma */
+    background-color: #ffad60; /* Lämmin vaalean oranssi, joulutunnelma */
     padding: 20px;
     border-radius: 8px;
     position: relative;
     height: 100px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #fceabb; /* Kiiltävä joulutunnelma */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #ff8c00; /* Kiiltävä joulutunnelma */
 }
 
 .door.open {
-    background-color: #ffb94d; /* Kirkas vaalean oranssi, kun luukku on avattu */
+    background-color: #ff8c00; /* Kirkas oranssi, kun luukku on avattu */
     transform: scale(1.1); /* Zoom-efekti */
 }
 
 .door:hover {
-    background-color: #ff9e49; /* Tummempi oranssi hover-tilassa */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #fceabb;
+    background-color: #ff7f50; /* Lämpimän punertava oranssi hover-tilassa */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ff8c00;
 }
 
 .door[style*="pointer-events: none"] {
