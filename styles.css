@@ -118,12 +118,12 @@ h1 {
 .door.sparkling {
     animation: sparkle 1.5s infinite;
     border: 3px solid #F2F2F2;
-    background: linear-gradient(45deg, rgba(199, 78, 100, 0.6), rgba(242, 242, 242, 0.4)); /* Käytetään tummempaa punasta */
+    background: linear-gradient(45deg, rgba(199, 78, 100, 0.6), rgba(216, 76, 96, 0.4)); /* Käytetään tummempaa punasta */
 }
 
 @keyframes sparkle {
     0%, 100% {
-        box-shadow: 0 0 10px rgba(199, 78, 100, 0.8), 0 0 20px rgba(242, 242, 242, 0.6);
+        box-shadow: 0 0 10px rgba(199, 78, 100, 0.8), 0 0 20px rgba(216, 76, 96, 0.4);
         transform: rotate(0deg);
     }
     50% {
