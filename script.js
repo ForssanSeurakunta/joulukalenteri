@@ -56,21 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Generoi lumihiutaleet
-    const snowflakesContainer = document.querySelector('.snowflakes-container');
-    for (let i = 0; i < 30; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.textContent = '❄';
-        snowflakesContainer.appendChild(snowflake);
+    // Haetaan logo
+    const logo = document.querySelector(".logo");
 
-        // Animaatio eri nopeuksilla ja sijainneilla
-        const animationDuration = Math.random() * 3 + 7; // 7s - 10s
-        const animationDelay = Math.random() * 5; // 0s - 5s
+    // Hiiren liikkeen seuraaminen: logo liikkuu todella vähän, kun hiiri menee sen päälle
+    logo.addEventListener("mouseenter", () => {
+        logo.style.transition = "transform 0.2s ease"; // Sujuva liike
+        logo.style.transform = "translate(5px, 5px)"; // Liikuttaa logoa hiukan oikealle ja alas
+    });
 
-        snowflake.style.animationDuration = `${animationDuration}s`;
-        snowflake.style.animationDelay = `${animationDelay}s`;
-        snowflake.style.left = `${Math.random() * 100}%`;
-        snowflake.style.fontSize = `${Math.random() * 10 + 20}px`;
-    }
+    // Palautetaan logo alkuperäiseen paikkaan, kun hiiri poistuu
+    logo.addEventListener("mouseleave", () => {
+        logo.style.transform = "translate(0, 0)"; // Palautetaan alkuperäiseen paikkaan
+    });
 });
