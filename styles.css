@@ -1,102 +1,94 @@
 /* Yleiset tyylit */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F0F0F0;
-    color: #333;
+    font-family: "Arial", sans-serif;
     text-align: center;
+    background: linear-gradient(to bottom, #ffcc99, #ff6666); /* Joulunpunainen ja kulta gradientti */
+    padding: 20px;
+    background-size: cover;
+    color: #fff;
 }
 
-h1 {
-    font-size: 2rem;
+/* Logon tyyli */
+.logo {
+    width: 40px; /* Säädä logon koko sopivaksi */
+    height: auto; /* Pitää mittasuhteet kunnossa */
+    margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
+    vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
+    transition: transform 0.2s ease; /* Sujuva liike kun logo liikkuu */
 }
 
-p {
-    font-size: 1.2rem;
-}
-
-/* Lumisateen asetukset */
-.snowflakes-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-}
-
+/* Lumisateen tyylit */
 .snowflake {
     position: absolute;
     top: -10px;
-    color: #fff;
+    pointer-events: none;
+    font-size: 24px;
+    color: white;
     opacity: 0.8;
-    animation-name: snowfall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: snowfall 10s linear infinite;
 }
 
 @keyframes snowfall {
     0% {
-        transform: translateY(0);
-        opacity: 0.9;
+        transform: translateX(0) translateY(-100vh);
     }
     100% {
-        transform: translateY(100vh);
-        opacity: 0.3;
+        transform: translateX(100px) translateY(100vh);
     }
 }
 
-/* Kalenterin ja luukkujen tyylit */
-.calendar-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.logo-container {
+/* Lumisateen ja kirkkautta lisäävän tyylit */
+h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: glow 1.5s alternate infinite;
 }
 
-.logo {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff9966;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff9966;
+    }
 }
 
+/* Muut elementit */
 .calendar {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .door {
-    background-color: #2A3D4E;
-    color: white;
+    background-color: #ffcccc; /* Vaaleanpunainen joulutunnelma */
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    position: relative;
+    height: 100px;
     cursor: pointer;
-    text-align: center;
-    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px #ffcc99; /* Kiiltävä joulutunnelma */
 }
 
 .door.open {
-    background-color: #58A4B0;
-    cursor: default;
+    background-color: #ff9966; /* Vaalean oranssi, kun luukku on avattu */
+    transform: scale(1.1); /* Zoom-efekti */
 }
 
-/* Erityiset tyylit */
-.sparkling {
-    color: #FFD700;
-    animation: sparkling 2s infinite;
+.door:hover {
+    background-color: #ff6699; /* Punaista väriä hover-tilassa */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ffcc99;
 }
 
-@keyframes sparkling {
-    0% {
-        color: #FFD700;
-    }
-    50% {
-        color: #FF00FF;
-    }
-    100% {
-        color: #FFD700;
-    }
+.door[style*="pointer-events: none"] {
+    opacity: 0.6; /* Haaleaksi tuleville luukoille */
 }
+
+.door[style*="pointer-events: none"] {
+    cursor: not-allowed; /* Estetään klikkaukset */
+}
+
+/* Säkenöivä efekti luukulle 24
