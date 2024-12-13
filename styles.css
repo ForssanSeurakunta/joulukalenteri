@@ -19,7 +19,7 @@ body {
 
 /* Logon hover-efekti - Tärähdys ja heiluminen */
 .logo:hover {
-    animation: logoShakeAndGrow 0.6s ease-in-out forwards;
+    animation: logoShakeAndGrow 1s ease-in-out forwards;
 }
 
 @keyframes logoShakeAndGrow {
