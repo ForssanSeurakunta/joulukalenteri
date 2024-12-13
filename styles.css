@@ -10,7 +10,7 @@ body {
 
 /* Logon tyyli */
 .logo {
-    width: 100px; /* Säädä logon koko sopivaksi */
+    width: 300px; /* Säädä logon koko sopivaksi */
     height: auto; /* Pitää mittasuhteet kunnossa */
     margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
     vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
