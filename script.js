@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentDay = today.getDate(); // Päivän numero
     const currentMonth = today.getMonth(); // Kuukausi (0 = tammikuu, 11 = joulukuu)
 
+    // Lisää säkenöivä efekti luukulle 24
+    const door24 = document.querySelector('.door[data-day="24"]');
+    if (door24) {
+        door24.classList.add("sparkling");
+    }
+
     // Linkit videoihin
     const videoLinks = [
         "https://youtu.be/WNs7fZ9oAu8",  // Luukku 1
@@ -32,23 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://www.example.com/video-24", // Luukku 24
         "https://www.example.com/video-25", // Luukku 25
     ];
-
-    // Lumisade
-    function createSnowflakes() {
-        const snowflakeCount = 50; // Lumihiutaleiden määrä
-        for (let i = 0; i < snowflakeCount; i++) {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.innerHTML = "&#10052;"; // Lumihiutaleen symboli
-            snowflake.style.left = `${Math.random() * 100}vw`; // Satunnainen sijainti vaakasuunnassa
-            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Satunnainen kesto
-            snowflake.style.animationDelay = `${Math.random() * 5}s`; // Satunnainen viive
-            document.body.appendChild(snowflake);
-        }
-    }
-
-    // Tässä varsinaisesti luodaan ne lumihiutaleet
-    createSnowflakes();
 
     doors.forEach(door => {
         const day = parseInt(door.getAttribute("data-day"));
