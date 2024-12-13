@@ -10,11 +10,34 @@ body {
 
 /* Logon tyyli */
 .logo {
-    width: 40px; /* Säädä logon koko sopivaksi */
+    width: 100px; /* Säädä logon koko sopivaksi */
     height: auto; /* Pitää mittasuhteet kunnossa */
     margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
     vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
     transition: transform 0.2s ease; /* Sujuva liike kun logo liikkuu */
+}
+
+/* Logon hover-efekti - Tärähdys ja heiluminen */
+.logo:hover {
+    animation: logoShakeAndGrow 0.6s ease-in-out forwards;
+}
+
+@keyframes logoShakeAndGrow {
+    0% {
+        transform: scale(1) rotate(0deg); /* Alkuperäinen asento */
+    }
+    25% {
+        transform: scale(1.1) rotate(-10deg); /* Pieni suurennus ja kallistus vasemmalle */
+    }
+    50% {
+        transform: scale(1.1) rotate(10deg); /* Pieni suurennus ja kallistus oikealle */
+    }
+    75% {
+        transform: scale(1.05) rotate(-5deg); /* Vähän vasemmalle */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Paluu alkuperäiseen asentoon */
+    }
 }
 
 /* Lumisateen tyylit */
@@ -92,3 +115,20 @@ h1 {
 }
 
 /* Säkenöivä efekti luukulle 24
+
+.door.sparkling {
+    animation: sparkle 1.5s infinite;
+    border: 3px solid gold;
+    background: linear-gradient(45deg, rgba(255, 255, 0, 0.6), rgba(255, 223, 0, 0.4));
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+        transform: rotate(0deg);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 223, 0, 0.9);
+        transform: rotate(2deg);
+    }
+}
