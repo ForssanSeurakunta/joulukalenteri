@@ -104,3 +104,21 @@ h1 {
         opacity: 0;
     }
 }
+
+/* Säkenöivä efekti luukulle 24 */
+.door.sparkling {
+    animation: sparkle 1.5s infinite;
+    border: 3px solid gold;
+    background: linear-gradient(45deg, rgba(255, 255, 0, 0.6), rgba(255, 223, 0, 0.4));
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+        transform: rotate(0deg);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 223, 0, 0.9);
+        transform: rotate(2deg);
+    }
+}
