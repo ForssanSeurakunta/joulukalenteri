@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://youtu.be/KElELXU8kfc", // Luukku 22
         "https://youtu.be/0x8fReUi_0w", // Luukku 23
         "https://youtu.be/LvYDpoTmdAI", // Luukku 24
-        "https://www.example.com/video-25", // Luukku 25
+        "https://youtu.be/H7q6quZO_5M", // Luukku 25
     ];
 
     doors.forEach(door => {
