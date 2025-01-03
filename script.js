@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const doors = document.querySelectorAll(".door");
-    const today = new Date(); // Hakee päivämäärän nyt
-    const currentDay = today.getDate(); // Päivän numero
-    const currentMonth = today.getMonth(); // Kuukausi (0 = tammikuu, 11 = joulukuu)
 
     // Lisää säkenöivä efekti luukulle 24
     const door24 = document.querySelector('.door[data-day="24"]');
@@ -38,10 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://youtu.be/LvYDpoTmdAI", // Luukku 24
         "https://youtu.be/H7q6quZO_5M", // Luukku 25
     ];
-            door.addEventListener("click", () => {
-                door.classList.add("open");
-                window.location.href = videoLinks[day - 1]; // Haetaan oikea video taulukosta
-            });
+
+    // Käy läpi kaikki luukut ja lisää klikkauskuuntelijat
+    doors.forEach(door => {
+        const day = parseInt(door.dataset.day, 10); // Hakee luukun päivämäärän
+        door.addEventListener("click", () => {
+            door.classList.add("open");
+            window.location.href = videoLinks[day - 1]; // Haetaan oikea video taulukosta
+        });
+    });
     
     
     // Haetaan logo
