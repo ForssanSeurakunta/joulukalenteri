@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     doors.forEach(door => {
         const day = parseInt(door.getAttribute("data-day"));
         
-        if (currentMonth === 11 && day <= currentDay) {
+        if (day <= currentDay) {
             // Luukku voidaan avata vain joulukuussa ja oikeana päivänä
             door.addEventListener("click", () => {
                 door.classList.add("open");
