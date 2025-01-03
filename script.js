@@ -38,24 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://youtu.be/LvYDpoTmdAI", // Luukku 24
         "https://youtu.be/H7q6quZO_5M", // Luukku 25
     ];
-
-    doors.forEach(door => {
-        const day = parseInt(door.getAttribute("data-day"));
-        
-        if (day <= currentDay) {
-            // Luukku voidaan avata vain joulukuussa ja oikeana päivänä
-            door.addEventListener("click", () => {
-                door.classList.add("open");
-                window.location.href = videoLinks[day - 1]; // Haetaan oikea video taulukosta
-            });
-        } else {
-            // Estetään klikkaukset ennen joulukuuta
-            door.style.pointerEvents = "none";
-            door.style.opacity = "0.6";
-            door.style.cursor = "not-allowed";
-        }
-    });
-
+    
     // Haetaan logo
     const logo = document.querySelector(".logo");
 
