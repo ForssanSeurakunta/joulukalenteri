@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://youtu.be/LvYDpoTmdAI", // Luukku 24
         "https://youtu.be/H7q6quZO_5M", // Luukku 25
     ];
+            door.addEventListener("click", () => {
+                door.classList.add("open");
+                window.location.href = videoLinks[day - 1]; // Haetaan oikea video taulukosta
+            });
+    
     
     // Haetaan logo
     const logo = document.querySelector(".logo");
