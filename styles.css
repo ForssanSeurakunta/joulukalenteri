@@ -18,16 +18,36 @@ body {
   height: auto;
   margin-left: 10px;
   vertical-align: middle;
-  transition: transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.logo:hover { animation: logoShakeAndGrow 0.3s ease-in-out forwards; }
 
-@keyframes logoShakeAndGrow {
-  0%   { transform: scale(1) rotate(0deg); }
-  25%  { transform: scale(1.1) rotate(-2deg); }
-  50%  { transform: scale(1.1) rotate(2deg); }
-  75%  { transform: scale(1.05) rotate(-2deg); }
-  100% { transform: scale(1) rotate(0deg); }
+/* kevyt nosto hoverissa */
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* kiiltoviiva */
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+}
+
+/* animaatio kun hiiri menee päälle */
+.logo:hover::after {
+  animation: logoShine 1.2s forwards;
+}
+
+@keyframes logoShine {
+  from { left: -100%; }
+  to { left: 150%; }
 }
 
 /* ===========================
