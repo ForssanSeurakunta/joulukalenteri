@@ -1,5 +1,5 @@
 /* ===========================
-   YLEISET TYYLIT
+   TEKSTIN ULKOASU, TAUSTA JNE.
    =========================== */
 body {
   font-family: "Poppins", sans-serif;
@@ -48,7 +48,7 @@ body {
 }
 
 /* ===========================
-   OTSIKOT
+   (HOHTAVAT) OTSIKOT
    =========================== */
 h1 {
   font-size: 2.5em;
@@ -63,7 +63,7 @@ h1 {
 }
 
 /* ===========================
-   KALENTERI & LUUKUT
+   ITSE KALENTERI & LUUKUT
    =========================== */
 .calendar {
   display: grid;
@@ -117,7 +117,7 @@ h1 {
 }
 
 /* ===========================
-   LUKITTU TILA (huuruefekti)
+   LUUKKUJEN LUKITTU TILA (huuruefekti)
    =========================== */
 .door.locked {
   cursor: not-allowed;
@@ -193,7 +193,7 @@ h1 {
 }
 
 /* ===========================
-   LUUKKU 24 — GOLDEN GOD RAYS
+   LUUKKU 24 SÄTEET
    =========================== */
 .door.sparkling {
   position: relative;
@@ -249,7 +249,7 @@ h1 {
 }
 
 /* ===========================
-   RESPONSIVE
+   RESPONSIVE (MOBIILIJUTTUJA)
    =========================== */
 @media (max-width: 1200px) {
   .calendar { grid-template-columns: repeat(5, 1fr); }
