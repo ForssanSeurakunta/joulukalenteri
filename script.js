@@ -9,31 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Linkit videoihin
     const videoLinks = [
-        "https://youtu.be/WNs7fZ9oAu8",  // Luukku 1
-        "https://youtu.be/bFVwdcSUO2o",  // Luukku 2
-        "https://youtu.be/GxwG9Bn2Wrw",  // Luukku 3
-        "https://youtu.be/OVEk4KcBkEM",  // Luukku 4
-        "https://youtu.be/j1LXYpvdpNE",  // Luukku 5
-        "https://youtu.be/A0Kl01Dabgk",  // Luukku 6
-        "https://youtu.be/cBJiK2pV5CQ",  // Luukku 7
-        "https://youtu.be/KQZG5tUtR_k",  // Luukku 8
-        "https://youtu.be/MvPHOcqY3wo",  // Luukku 9
-        "https://youtu.be/QjIOkFX9Ntg", // Luukku 10
-        "https://youtu.be/K6_po_B1cAc", // Luukku 11
-        "https://youtu.be/HY4SM9fxiX4", // Luukku 12
-        "https://youtu.be/leA3oeotRqU", // Luukku 13
-        "https://youtu.be/P7pA-w3u-aE", // Luukku 14
-        "https://youtu.be/p1B4UVxuvGM", // Luukku 15
-        "https://youtu.be/_rCMBjyE_68", // Luukku 16
-        "https://youtu.be/iEXf4zruf7w", // Luukku 17
-        "https://youtu.be/MnE8FPW-4-o", // Luukku 18
-        "https://youtu.be/osDBcw1UiFo", // Luukku 19
-        "https://youtu.be/NP6f2idYSFU", // Luukku 20
-        "https://youtu.be/7dlKkVQdsIg", // Luukku 21
-        "https://youtu.be/KElELXU8kfc", // Luukku 22
-        "https://youtu.be/0x8fReUi_0w", // Luukku 23
-        "https://youtu.be/LvYDpoTmdAI", // Luukku 24
-        "https://youtu.be/H7q6quZO_5M", // Luukku 25
+        "",  // Luukku 1
+        "",  // Luukku 2
+        "",  // Luukku 3
+        "",  // Luukku 4
+        "",  // Luukku 5
+        "",  // Luukku 6
+        "",  // Luukku 7
+        "",  // Luukku 8
+        "",  // Luukku 9
+        "", // Luukku 10
+        "", // Luukku 11
+        "", // Luukku 12
+        "", // Luukku 13
+        "", // Luukku 14
+        "", // Luukku 15
+        "", // Luukku 16
+        "", // Luukku 17
+        "", // Luukku 18
+        "", // Luukku 19
+        "", // Luukku 20
+        "", // Luukku 21
+        "", // Luukku 22
+        "", // Luukku 23
+        "", // Luukku 24
+        "", // Luukku 25
     ];
 
     // Käy läpi kaikki luukut ja lisää klikkauskuuntelijat
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hiiren liikkeen seuraaminen: logo liikkuu todella vähän, kun hiiri menee sen päälle
     logo.addEventListener("mouseenter", () => {
         logo.style.transition = "transform 0.2s ease"; // Sujuva liike
-        logo.style.transform = "translate(5px, 5px)"; // Liikuttaa logoa hiukan oikealle ja alas
+        logo.style.transform = "translate(3px, 3px)"; // Liikuttaa logoa hiukan oikealle ja alas
     });
 
     // Palautetaan logo alkuperäiseen paikkaan, kun hiiri poistuu
