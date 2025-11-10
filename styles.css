@@ -1,6 +1,6 @@
 /* Yleiset tyylit */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: "Noto Serif Display", serif;
     text-align: center;
     background: linear-gradient(to bottom, #F2727D, #731F2E, #C7CFD9, #F2F2F2, #707F8C); /* Harmoninen gradientti */
     padding: 20px;
@@ -60,7 +60,7 @@ body {
     }
 }
 
-/* Lumisateen ja kirkkautta lisäävän tyylit */
+/* Lumisateen ja kirkkautta lisäävät tyylit */
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -114,20 +114,59 @@ h1 {
     cursor: not-allowed; /* Estetään klikkaukset */
 }
 
-/* Säkenöivä efekti luukulle 24 */
+/* Säkenöivä ja kultainen "God Rays" -efekti luukulle 24*/
 .door.sparkling {
-    animation: sparkle 1.5s infinite;
-    border: 3px solid #F2F2F2;
-    background: linear-gradient(45deg, rgba(199, 78, 100, 0.6), rgba(216, 76, 96, 0.4)); /* Käytetään tummempaa punasta */
+  position: relative;
+  overflow: visible;
+  animation: pulseGlow 3s infinite ease-in-out;
+  box-shadow: 0 0 20px 5px gold, 0 0 60px 15px rgba(255, 215, 0, 0.4);
+  z-index: 2;
 }
 
-@keyframes sparkle {
-    0%, 100% {
-        box-shadow: 0 0 10px rgba(199, 78, 100, 0.8), 0 0 20px rgba(216, 76, 96, 0.4);
-        transform: rotate(0deg);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(199, 78, 100, 1), 0 0 40px rgba(242, 242, 242, 0.9);
-        transform: rotate(2deg);
-    }
+.door.sparkling::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 180%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 215, 0, 0.15) 0deg,
+    rgba(255, 215, 0, 0) 30deg,
+    rgba(255, 215, 0, 0.15) 60deg,
+    rgba(255, 215, 0, 0) 90deg,
+    rgba(255, 215, 0, 0.15) 120deg,
+    rgba(255, 215, 0, 0) 150deg,
+    rgba(255, 215, 0, 0.15) 180deg,
+    rgba(255, 215, 0, 0) 210deg,
+    rgba(255, 215, 0, 0.15) 240deg,
+    rgba(255, 215, 0, 0) 270deg,
+    rgba(255, 215, 0, 0.15) 300deg,
+    rgba(255, 215, 0, 0) 330deg,
+    rgba(255, 215, 0, 0.15) 360deg
+  );
+  border-radius: 50%;
+  z-index: -1;
+  animation: spinRays 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spinRays {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px 5px gold, 0 0 60px 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px 10px gold, 0 0 100px 25px rgba(255, 215, 0, 0.6);
+  }
 }
