@@ -117,56 +117,70 @@ h1 {
 /* Säkenöivä ja kultainen "God Rays" -efekti luukulle 24*/
 .door.sparkling {
   position: relative;
-  overflow: visible;
+  overflow: visible; /* sallii hehkun ulkopuolelle */
   animation: pulseGlow 3s infinite ease-in-out;
-  box-shadow: 0 0 20px 5px gold, 0 0 60px 15px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35);
   z-index: 2;
 }
 
+/* Pyöreä sädekehä, rajattu ja pehmeästi feidattu */
 .door.sparkling::before {
+  --ray-size: 130%;          /* pienempi koko, ei karkaa */
+  --ray-opacity: 0.12;       /* säteiden läpikuultavuus */
+  --fade-start: 52%;         /* missä kohtaa alkaa feidi */
+  --fade-end: 70%;           /* missä kohtaa feidi loppuu */
+
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 180%;
-  height: 180%;
+  width: var(--ray-size);
+  aspect-ratio: 1 / 1;       /* ⬅️ pitää muodon aina ympyränä */
   transform: translate(-50%, -50%) rotate(0deg);
+  pointer-events: none;
+  z-index: -1;
+
+  /* Säteet: conic-gradient + kevyt kultainen sävy */
   background: conic-gradient(
     from 0deg,
-    rgba(255, 215, 0, 0.15) 0deg,
-    rgba(255, 215, 0, 0) 30deg,
-    rgba(255, 215, 0, 0.15) 60deg,
-    rgba(255, 215, 0, 0) 90deg,
-    rgba(255, 215, 0, 0.15) 120deg,
-    rgba(255, 215, 0, 0) 150deg,
-    rgba(255, 215, 0, 0.15) 180deg,
-    rgba(255, 215, 0, 0) 210deg,
-    rgba(255, 215, 0, 0.15) 240deg,
-    rgba(255, 215, 0, 0) 270deg,
-    rgba(255, 215, 0, 0.15) 300deg,
-    rgba(255, 215, 0, 0) 330deg,
-    rgba(255, 215, 0, 0.15) 360deg
+    rgba(255, 215, 0, var(--ray-opacity)) 0deg,
+    rgba(255, 215, 0, 0) 28deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 56deg,
+    rgba(255, 215, 0, 0) 84deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 112deg,
+    rgba(255, 215, 0, 0) 140deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 168deg,
+    rgba(255, 215, 0, 0) 196deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 224deg,
+    rgba(255, 215, 0, 0) 252deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 280deg,
+    rgba(255, 215, 0, 0) 308deg,
+    rgba(255, 215, 0, var(--ray-opacity)) 336deg,
+    rgba(255, 215, 0, 0) 360deg
   );
   border-radius: 50%;
-  z-index: -1;
-  animation: spinRays 10s linear infinite;
-  pointer-events: none;
+
+  /* Pehmeä reuna, ettei säteet veny "loputtomiin" */
+  -webkit-mask-image: radial-gradient(circle at center, #000 0 var(--fade-start), transparent var(--fade-end));
+          mask-image: radial-gradient(circle at center, #000 0 var(--fade-start), transparent var(--fade-end));
+
+  animation: spinRays 12s linear infinite;
+  /* Valinnainen: yhdistyy kauniisti tummiin taustoihin */
+  mix-blend-mode: screen;
 }
 
+/* Hitaampi, rauhallinen pyörintä */
 @keyframes spinRays {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
+/* Hieman hillitympi pulssi */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px 5px gold, 0 0 60px 15px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35);
   }
   50% {
-    box-shadow: 0 0 40px 10px gold, 0 0 100px 25px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 24px 7px gold, 0 0 70px 18px rgba(255, 215, 0, 0.55);
   }
 }
