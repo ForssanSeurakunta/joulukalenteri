@@ -1,123 +1,145 @@
 /* Yleiset tyylit */
 body {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom, #F2727D, #731F2E, #B97A45, #E6C38B, #FAF5E9);
-    padding: 20px;
-    background-size: cover;
-    color: #fff; /* Valkoinen teksti */
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #F2727D, #731F2E, #B97A45, #E6C38B, #FAF5E9);
+  padding: 20px;
+  background-size: cover;
+  color: #fff; /* Valkoinen teksti */
 }
 
 /* Logon tyyli */
 .logo {
-    width: 300px; /* Säädä logon koko sopivaksi */
-    height: auto; /* Pitää mittasuhteet kunnossa */
-    margin-left: 10px; /* Jättää vähän tilaa tekstin ja logon väliin */
-    vertical-align: middle; /* Kohdistaa logon keskelle tekstin kanssa */
-    transition: transform 0.2s ease; /* Sujuva liike kun logo liikkuu */
+  width: 300px;
+  height: auto;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
 }
 
 /* Logon hover-efekti - Tärähdys ja heiluminen */
-.logo:hover {
-    animation: logoShakeAndGrow 0.3s ease-in-out forwards;
-}
+.logo:hover { animation: logoShakeAndGrow 0.3s ease-in-out forwards; }
 
 @keyframes logoShakeAndGrow {
-    0% {
-        transform: scale(1) rotate(0deg); /* Alkuperäinen asento */
-    }
-    25% {
-        transform: scale(1.1) rotate(-2deg); /* Pieni suurennus ja kallistus vasemmalle */
-    }
-    50% {
-        transform: scale(1.1) rotate(2deg); /* Pieni suurennus ja kallistus oikealle */
-    }
-    75% {
-        transform: scale(1.05) rotate(-2deg); /* Vähän vasemmalle */
-    }
-    100% {
-        transform: scale(1) rotate(0deg); /* Paluu alkuperäiseen asentoon */
-    }
+  0%   { transform: scale(1) rotate(0deg); }
+  25%  { transform: scale(1.1) rotate(-2deg); }
+  50%  { transform: scale(1.1) rotate(2deg); }
+  75%  { transform: scale(1.05) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 
-/* Lumisateen tyylit */
+/* Lumisade */
 .snowflake {
-    position: absolute;
-    top: -10px;
-    pointer-events: none;
-    font-size: 24px;
-    color: white;
-    opacity: 0.8;
-    animation: snowfall 10s linear infinite;
+  position: absolute;
+  top: -10px;
+  pointer-events: none;
+  font-size: 24px;
+  color: white;
+  opacity: 0.8;
+  animation: snowfall 10s linear infinite;
 }
 
 @keyframes snowfall {
-    0% {
-        transform: translateX(0) translateY(-100vh);
-    }
-    100% {
-        transform: translateX(100px) translateY(100vh);
-    }
+  0%   { transform: translateX(0) translateY(-100vh); }
+  100% { transform: translateX(100px) translateY(100vh); }
 }
 
-/* Lumisateen ja kirkkautta lisäävät tyylit */
+/* Otsikkohehku */
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: glow 1.5s alternate infinite;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  animation: glow 1.5s alternate infinite;
 }
 
 @keyframes glow {
-    0% {
-        text-shadow: 0 0 20px #F2727D, 0 0 30px #F2727D, 0 0 40px #F2F2F2;
-    }
-    100% {
-        text-shadow: 0 0 5px #F2727D, 0 0 10px #F2727D, 0 0 15px #F2F2F2;
-    }
+  0%   { text-shadow: 0 0 20px #F2727D, 0 0 30px #F2727D, 0 0 40px #F2F2F2; }
+  100% { text-shadow: 0 0 5px  #F2727D, 0 0 10px #F2727D, 0 0 15px #F2F2F2; }
 }
 
-/* Muut elementit */
+/* Kalenteri ja luukut */
 .calendar {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }
 
 .door {
-    background-color: #F18D89;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
-    height: 100px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2); /* Lisää varjostuksia */
-}
-
-.door.open {
-    background-color: #F2727D; /* Vaaleanpunainen, kun luukku on avattu */
-    transform: scale(1.1); /* Zoom-efekti */
+  background-color: #F18D89;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3), 0 0 15px rgba(0,0,0,0.2);
+  outline: none;
 }
 
 .door:hover {
-    background-color: #731F2E; /* Tummanpunainen hover-tilassa */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #731F2E; /* Tummanpunainen hover-tilassa */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 15px rgba(0,0,0,0.2);
 }
 
-.door[style*="pointer-events: none"] {
-    opacity: 0.6; /* Haaleaksi tuleville luukoille */
+/* näppis-fokus näkyväksi */
+.door:focus-visible {
+  outline: 3px solid rgba(255, 215, 0, 0.9);
+  outline-offset: 2px;
 }
 
-.door[style*="pointer-events: none"] {
-    cursor: not-allowed; /* Estetään klikkaukset */
+/* Avattu luukku */
+.door.open {
+  background-color: #F2727D;
+  transform: scale(1.1);
 }
 
-/* Säkenöivä ja kultainen "God Rays" -efekti luukulle 24*/
+/* 🔒 huuru lukittuihin luukkuihin */
+.door.locked {
+  cursor: not-allowed;
+  filter: grayscale(40%) brightness(0.92) blur(1px);
+  opacity: 0.85;
+  position: relative;
+}
+
+/* jääkalvo-kiilto */
+.door.locked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.30),
+    rgba(255,255,255,0.06)
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* pieni lukkoikonin vihje että ei oo vielä auki */
+.door.locked::before {
+  content: "🔒";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Yritetään avata liian aikaisin → nykäys */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%     { transform: translateX(-2px); }
+  40%     { transform: translateX(2px); }
+  60%     { transform: translateX(-1px); }
+  80%     { transform: translateX(1px); }
+}
+.door.shake { animation: shake 0.4s ease; }
+
+/* Säkenöivä efekti luukulle 24 */
 .door.sparkling {
   position: relative;
-  overflow: visible; /* sallii hehkun ulkopuolelle */
+  overflow: visible;
   animation: pulseGlow 3s infinite ease-in-out;
   box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35);
   z-index: 2;
@@ -125,48 +147,42 @@ h1 {
 
 /* Pyöreä sädekehä, rajattu ja pehmeästi feidattu */
 .door.sparkling::before {
-  --ray-size: 130%;          /* pienempi koko, ei karkaa */
-  --ray-opacity: 0.12;       /* säteiden läpikuultavuus */
-  --fade-start: 52%;         /* missä kohtaa alkaa feidi */
-  --fade-end: 70%;           /* missä kohtaa feidi loppuu */
+  --ray-size: 130%;
+  --ray-opacity: 0.12;
+  --fade-start: 52%;
+  --fade-end: 70%;
 
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: var(--ray-size);
-  aspect-ratio: 1 / 1;       /* ⬅️ pitää muodon aina ympyränä */
+  aspect-ratio: 1 / 1; /* pitää ympyränä */
   transform: translate(-50%, -50%) rotate(0deg);
   pointer-events: none;
   z-index: -1;
-
-  /* Säteet: conic-gradient + kevyt kultainen sävy */
   background: conic-gradient(
     from 0deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 0deg,
-    rgba(255, 215, 0, 0) 28deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 56deg,
-    rgba(255, 215, 0, 0) 84deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 112deg,
-    rgba(255, 215, 0, 0) 140deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 168deg,
-    rgba(255, 215, 0, 0) 196deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 224deg,
-    rgba(255, 215, 0, 0) 252deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 280deg,
-    rgba(255, 215, 0, 0) 308deg,
-    rgba(255, 215, 0, var(--ray-opacity)) 336deg,
-    rgba(255, 215, 0, 0) 360deg
+    rgba(255,215,0,var(--ray-opacity)) 0deg,
+    rgba(255,215,0,0) 28deg,
+    rgba(255,215,0,var(--ray-opacity)) 56deg,
+    rgba(255,215,0,0) 84deg,
+    rgba(255,215,0,var(--ray-opacity)) 112deg,
+    rgba(255,215,0,0) 140deg,
+    rgba(255,215,0,var(--ray-opacity)) 168deg,
+    rgba(255,215,0,0) 196deg,
+    rgba(255,215,0,var(--ray-opacity)) 224deg,
+    rgba(255,215,0,0) 252deg,
+    rgba(255,215,0,var(--ray-opacity)) 280deg,
+    rgba(255,215,0,0) 308deg,
+    rgba(255,215,0,var(--ray-opacity)) 336deg,
+    rgba(255,215,0,0) 360deg
   );
   border-radius: 50%;
-
-  /* Pehmeä reuna, ettei säteet veny "loputtomiin" */
   -webkit-mask-image: radial-gradient(circle at center, #000 0 var(--fade-start), transparent var(--fade-end));
           mask-image: radial-gradient(circle at center, #000 0 var(--fade-start), transparent var(--fade-end));
-
   animation: spinRays 12s linear infinite;
-  /* Valinnainen: yhdistyy kauniisti tummiin taustoihin */
-  mix-blend-mode: screen;
+  mix-blend-mode: screen; /* valinnainen, toimii tummalla hyvin */
 }
 
 /* Hitaampi, rauhallinen pyörintä */
@@ -177,10 +193,6 @@ h1 {
 
 /* Hieman hillitympi pulssi */
 @keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35);
-  }
-  50% {
-    box-shadow: 0 0 24px 7px gold, 0 0 70px 18px rgba(255, 215, 0, 0.55);
-  }
+  0%, 100% { box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35); }
+  50%      { box-shadow: 0 0 24px 7px gold, 0 0 70px 18px rgba(255, 215, 0, 0.55); }
 }
