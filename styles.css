@@ -1,6 +1,6 @@
 /* Yleiset tyylit */
 body {
-    font-family: "Noto Serif Display", serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, #F2727D, #731F2E, #E6C38B, #FAF5E9, #707F8C);
     padding: 20px;
