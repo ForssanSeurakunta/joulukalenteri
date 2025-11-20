@@ -11,11 +11,24 @@ body {
   background: linear-gradient(
   to bottom,
   #3656A3 0%,
-  #4B5BA0 35%,
-  #6A6AA6 70%,
-  #7066A5 100%
+  #4B5BA0 20%,
+  #6A6AA6 45%,
+  #7066A5 75%,
+  #8A7BB8 100%
 );
 
+body::after {
+  content: "";
+  display: block;
+  height: 240px;
+}
+
+@media (max-width: 600px) {
+  body::after {
+    height: 180px;
+  }
+}
+  
   padding: 20px;
   background-size: cover;
   color: #fff;
