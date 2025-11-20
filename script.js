@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Tyhjät linkit valmiiksi
-  const videoLinks = Array.from({ length: 25 }, () => "");
+  const videoLinks = Array.from({ length: 28 }, () => "");
 
   // 3D-pinta kaikille luukuille
   doors.forEach(d => d.classList.add("door--button3d"));
