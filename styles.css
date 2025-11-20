@@ -222,8 +222,11 @@ h1 {
 .door.sparkling {
   position: relative;
   overflow: visible;
-  animation: pulseGlow 3s infinite ease-in-out;
-  box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35);
+  /* ultrahillitty, tasakokoinen hehku */
+  animation: pulseGlow 4s ease-in-out infinite;
+  box-shadow:
+    0 0 18px 5px rgba(255, 215, 0, 0.55),
+    0 0 42px 12px rgba(255, 215, 0, 0.45);
   z-index: 2;
 }
 .door.sparkling::before {
@@ -267,9 +270,19 @@ h1 {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+/* 🌟 Ultrahillitty pulseGlow: vain kirkkaus elää, ei koko */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 14px 4px gold, 0 0 40px 10px rgba(255, 215, 0, 0.35); }
-  50%      { box-shadow: 0 0 24px 7px gold, 0 0 70px 18px rgba(255, 215, 0, 0.55); }
+  0%, 100% {
+    box-shadow:
+      0 0 18px 5px rgba(255, 215, 0, 0.45),
+      0 0 42px 12px rgba(255, 215, 0, 0.35);
+  }
+  50% {
+    box-shadow:
+      0 0 18px 5px rgba(255, 215, 0, 0.65),
+      0 0 42px 12px rgba(255, 215, 0, 0.55);
+  }
 }
 
 /* ===========================
