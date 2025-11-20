@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll; /* pitää pystyscrollin aina näkyvissä, sivu ei “hypi” */
+}
+
 /* ===========================
    TEKSTIN ULKOASU, TAUSTA JNE.
    =========================== */
