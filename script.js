@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Tyhjät linkit valmiiksi
    const videoLinks = [
-    "", // 1
+    "https://youtu.be/qyg9VzHkVlU", // 1
     "", // 2
     "", // 3
     "", // 4
