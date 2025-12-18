@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://youtu.be/S1i6KppTv88", // 19
     "https://youtu.be/6HicwvOIw3g", // 20
     "https://youtu.be/tHQNQjPliI8", // 21
-    "", // 22
+    "https://youtu.be/Lqx1S3_HvM0", // 22
     "", // 23
     "", // 24
     "", // 25
