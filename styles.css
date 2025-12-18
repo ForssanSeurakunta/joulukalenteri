@@ -219,7 +219,7 @@ h1 {
 }
 
 /* ===========================
-   KESKIBADGE (esim. 24)
+   LUUKKU 24 ERIKOISUUDET
    =========================== */
 .door.door--badge::after {
   content: attr(data-day);
